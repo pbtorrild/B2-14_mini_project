@@ -21,7 +21,7 @@
 			ros::Rate loop_rate(10); 								/*Created a rate object								*/
 			int number_count=0; 										/* Set start number 									*/
 
-			while (msg->data.c_str() !=down) {
+			while (msg->data.c_str() ==up) {
 						std_msgs::Int32 msg;            	/* create int ROS message 						*/
 						msg.data = number_count;        	/* name for the msg object 						*/
 						ROS_INFO("sending %d",msg.data);  /* Prints the data 										*/
@@ -31,7 +31,7 @@
 						++ number_count;
 					}
 
-				while (msg->data.c_str() !=up) {
+				while (msg->data.c_str() ==down) {
 					std_msgs::Int32 msg;            		/* create int ROS message 						*/
 					msg.data = number_count;        		/* name for the msg object 						*/
 					ROS_INFO("sending %d",msg.data);  	/* Prints the data 										*/
