@@ -3,9 +3,7 @@
 #include <ros/console.h>
 //Header of Int32 standard message
 #include "stdlib.h"
-#include "std_msgs/Int32.h"
 #include "std_msgs/String.h"
-
 #include <sstream>
 #include <iostream>
 
