@@ -17,14 +17,12 @@ void number_callback(const std_msgs::Int32::ConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-
 	//Initialising ROS node with a name of subscriber_one
 	ros::init(argc, argv,"subscriber_one");
 	//Created a nodehandle object
 	ros::NodeHandle node_obj;
-	//Create a ubscriber object
+	//Create a subscriber object
 	ros::Subscriber number_subscriber = node_obj.subscribe("/numbers",10,number_callback);
-
 	//Spinning the node
 	ros::spin();
 	return 0;
