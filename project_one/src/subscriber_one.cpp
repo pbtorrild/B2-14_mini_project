@@ -12,7 +12,7 @@
 //Callback of the topic /numbers
 void number_callback(const std_msgs::Int32::ConstPtr& msg)
 {
-	ROS_INFO("Recieved  [%d]",msg->data);
+	ROS_INFO("Received  [%d]",msg->data);
 }
 
 int main(int argc, char **argv)
